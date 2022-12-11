@@ -1,0 +1,12 @@
+<table width="70%">
+    <tr>
+        <td class="my-bold my-bborder">Eesimi</td>
+        <td class="my-bold my-bborder">Perekonnanimi</td>
+        <td class="my-bold my-bborder">Telefon</td>
+    </tr>
+    <tr tpl-foreach="$personInfo as $info">
+        <td><a href="?cmd=show_edit_page&person_id={{($info->currentID)}}">{{$info->firstName}}</a></td>
+        <td>{{$info->lastName}}</td>
+        <td>{{$info->phonesStrRepresentation()}}</td>
+    </tr>
+</table>

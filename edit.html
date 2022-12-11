@@ -1,0 +1,37 @@
+<form method="post" action="?cmd=edit&person_id={{($person->currentID)}}">
+
+    <div id="error-block" tpl-if="count($errors) > 0">
+        <div tpl-foreach="$errors as $error">{{$error}}</div>
+        <br>
+    </div>
+
+    <table>
+        <td>Eesnimi:</td>
+        <td><input type="text" name="firstName" value="{{$person->firstName}}"></td>
+        <tr>
+            <td>Perekonnanimi:</td>
+            <td><input type="text" name="lastName" value="{{$person->lastName}}"></td>
+        </tr>
+        <tr>
+            <td>Telefon:</td>
+            <td><input type="text" name="phone1" value="{{array_shift($person->phones)}}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text" name="phone2" value="{{array_shift($person->phones)}}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text" name="phone3" value="{{array_shift($person->phones)}}"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="right">
+                <br>
+                <input class="button" name="submitButton" type="submit" value="Salvesta">
+            </td>
+        </tr>
+
+    </table>
+</form>
+<br>

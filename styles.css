@@ -1,0 +1,33 @@
+body {
+    font-size: 14px;
+    font-family: "Verdana", sans-serif;
+    color: Black;
+}
+
+.my-bold {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}
+
+.my-bborder {
+    border-bottom: 3px solid black;
+}
+
+#menu {
+    color: green;
+}
+
+#error-block {
+    /*white-space: pre;*/
+    color: red;
+}
+
+
+input {
+    width: 22em;
+}
+
+input[type='button'] {
+    width: 8em;
+}
